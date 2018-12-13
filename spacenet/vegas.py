@@ -139,11 +139,17 @@ def build_scene(task, spacenet_config, id, channel_order=None, vector_tile_optio
                                            .with_vector_source(vector_source) \
                                            .build()
 
+    vector_output = {'mode': 'buildings', 'class_id': 1}
+    label_store = rv.LabelStoreConfig.builder(rv.SEMANTIC_SEGMENTATION_RASTER) \
+                                     .with_vector_output([vector_output]) \
+                                     .build()
+
     scene = rv.SceneConfig.builder() \
                           .with_task(task) \
                           .with_id(id) \
                           .with_raster_source(raster_source) \
                           .with_label_source(label_source) \
+                          .with_label_store(label_store) \
                           .build()
 
     return scene
