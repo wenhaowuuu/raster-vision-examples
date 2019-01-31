@@ -222,6 +222,10 @@ Viewing the validation scene results for scene ID `013022232023` looks like this
 ![QGIS results explorer](img/qgis-spacenet-cc.png)
 
 
+### Semantic Segmentation
+
+An experiment to do semantic segmentation on Spacenet Rio is available [here](spacenet/rio_semantic_segmentation.py).
+
 ## Spacenet Vegas Roads and Buildings: All Tasks <a name="spacenet-vegas"></a>
 
 This example shows how to run an experiment on the [Spacenet Vegas](https://spacenetchallenge.github.io/AOI_Lists/AOI_2_Vegas.html) dataset with the option to choose either roads or buildings, and use any task.
